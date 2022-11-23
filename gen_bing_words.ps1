@@ -6,7 +6,7 @@ Param(
 
  $KEYWORDLIST="C:\Program Files\Python311\Lib\site-packages\bing_rewards\data\keywords.txt"
  $DOWNLOADFILE="$PSScriptRoot\searches.txt"
- $TEMPFILE="$PSScriptRoot\tempfile.txt"
+ $TEMPFILE="$PSScriptRoot\tempfile.txt" 
 
 function updatewords {
     # Connect to Google and download their latest daily trending searches
@@ -39,6 +39,10 @@ function updatewords {
     
     # Write the Google searches to the end of the keyword list.
     Get-Content $DOWNLOADFILE | Out-File -FilePath $KEYWORDLIST -Append
+
+    # Now let's update anything with the year in it to keep those current
+    $CURRENTYEAR=(Get-Date).Year
+    (Get-Content $KEYWORDLIST) -Replace '2[0-9][0-9][0-9]', "$CURRENTYEAR" | Set-Content $KEYWORDLIST
 
     # Another sanity check.  This count should match the "before count"
     $KEYWORDCOUNT=$(Get-Content $KEYWORDLIST | Measure-Object -Line).Lines

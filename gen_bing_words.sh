@@ -21,6 +21,10 @@ updatewords() {
 	echo "Before count of keywords.txt: $(wc -l ${KEYWORDLIST})"
 	/usr/bin/sed -i "1,${SEARCHCOUNT}d" ${KEYWORDLIST}
 
+	# Let's update the year
+	CURRENTYEAR=$(date +%YYYY)
+	/usr/bin/sed -i "s/2[0-9][0-9][0-9]/${CURRENTYEAR}/g"
+
 	# Now append the Google searches to the keyword list
 	cat ${DOWNLOADFILE} >> ${KEYWORDLIST}
 
