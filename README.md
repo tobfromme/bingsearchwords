@@ -11,6 +11,8 @@ Two scripts are provided:
 
 - Install bing-rewards *first*.  I run it fine with Python 3.11.0.
 
+- For Windows only, install [PowerShell 7](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?WT.mc_id=THOMASMAURER-blog-thmaure&view=powershell-7 "PowerShell 7").  This has been tested with version 7.3.  Winget or MSI both work.  Use the default location or you will need to update the Task Scheduler job to point to the correct location (under Scheduling).
+
 - Download the appropriate files for your system.
    For Linux, your home directory is suitable.
    For Windows, I recommend creating C:\Scripts and saving there.  Otherwise, you'll need to edit the script.
