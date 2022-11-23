@@ -63,5 +63,4 @@ Two scripts are provided:
    Ensure the user running the script has write permissions on the keywords.txt file.  You can do so by:
 
      sudo to root
-
-     ```chown <your username> /path/to/keywords.txt```
+     chown <your username> /path/to/keywords.txt
