@@ -31,16 +31,16 @@ Two scripts are provided:
 
 # Important Notes *before executing*:
 
-- All:
+## All:
 
    The script will only modify the keywords.txt file once per day by default.  This is to ensure it is not overrun with the same keywords, thus making your automated searches ineffective.
 
    However, if you like to throw caution to the wind, add "--force" at the end of either script:
-   
-      ```gen_bing_words.sh --force```
-      ```gen_bing_words.ps1 --force```
 
-- Windows:  
+      gen_bing_words.sh --force
+      gen_bing_words.ps1 --force
+
+## Windows:  
 
    You must run with Administrator, unless you have modified the permissions of the keywords.txt file to allow your user to write to it (recommended) or disabled UAC.  You can do so by:
 
@@ -58,7 +58,7 @@ Two scripts are provided:
      12. Click "Full Control"
      13. Click "OK"
 
-- Linux:
+## Linux:
 
    Ensure the user running the script has write permissions on the keywords.txt file.  You can do so by:
 
