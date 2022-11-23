@@ -1,13 +1,13 @@
-Using the script from here:  https://github.com/jack-mil/bing-rewards
+Using the script from here:  [bing-rewards](https://github.com/jack-mil/bing-rewards "Bing Rewards")
 
 I wanted the keywords.txt file to be updated with relevant searches, not things from several years ago.
 
 Two scripts are provided:
 
-- gen_bing_words.ps1:  Tested with PowerShell 7.3 on Windows only
+- gen_bing_words.ps1:  Tested with PowerShell 7.3 on Windows 11 only
 - gen_bing_words.sh:   Tested on Arch Linux and Fedora 36/37
 
-Installation:
+# Installation:
 
 - Install bing-rewards *first*.  I run it fine with Python 3.11.0.
 
@@ -18,7 +18,7 @@ Installation:
 - Update the script to the correct location of keywords.txt (the KEYWORDLIST variable)
 
 - Schedule using cron (Linux) for 1am:
-     echo "0 1 * * * bash ~/gen_bing_words.sh > ~/updatewords.txt" | crontab
+     ```echo "0 1 * * * bash ~/gen_bing_words.sh > ~/updatewords.txt" | crontab
 
 - Schedule using Task Scheduler (Windows) for 1am:
      Click Start
@@ -28,7 +28,7 @@ Installation:
      Browse to the downloaded "Generate Bing Keywords.xml" file.
      Click OK.
 
-Important Notes *before executing*:
+# Important Notes *before executing*:
 
 - All:
 
@@ -36,8 +36,8 @@ Important Notes *before executing*:
 
    However, if you like to throw caution to the wind, add "--force" at the end of either script:
 
-      gen_bing_words.sh --force
-      gen_bing_words.ps1 --force
+      ```gen_bing_words.sh --force
+      gen_bing_words.ps1 --force```
 
 - Windows:  
 
@@ -62,4 +62,4 @@ Important Notes *before executing*:
    Ensure the user running the script has write permissions on the keywords.txt file.  You can do so by:
 
      sudo to root
-     chown <your username> /path/to/keywords.txt
+     ```chown <your username> /path/to/keywords.txt
