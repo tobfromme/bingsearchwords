@@ -36,6 +36,7 @@ Two scripts are provided:
    The script will only modify the keywords.txt file once per day by default.  This is to ensure it is not overrun with the same keywords, thus making your automated searches ineffective.
 
    However, if you like to throw caution to the wind, add "--force" at the end of either script:
+   
       ```gen_bing_words.sh --force```
       ```gen_bing_words.ps1 --force```
 
