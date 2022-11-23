@@ -18,7 +18,7 @@ Two scripts are provided:
 - Update the script to the correct location of keywords.txt (the KEYWORDLIST variable)
 
 - Schedule using cron (Linux) for 1am:
-  ```echo "0 1 * * * bash ~/gen_bing_words.sh > ~/updatewords.txt" | crontab```
+```echo "0 1 * * * bash ~/gen_bing_words.sh > ~/updatewords.txt" | crontab```
 
 - Schedule using Task Scheduler (Windows) for 1am:
      Click Start
