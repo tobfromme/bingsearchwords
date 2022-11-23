@@ -15,7 +15,7 @@ Two scripts are provided:
 
 - Download the appropriate files for your system.
    For Linux, your home directory is suitable.
-   For Windows, I recommend creating C:\Scripts and saving there.  Otherwise, you'll need to edit the script.
+   For Windows, I recommend a directory such as C:\Scripts to store all of your scripts.
 
 - Update the script to the correct location of keywords.txt (the KEYWORDLIST variable)
 

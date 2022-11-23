@@ -2,11 +2,11 @@ Param(
     [string] $forceFlag
  )
 
-Start-Transcript "C:\Scripts\updatewords.txt"
+ Start-Transcript "$PSScriptRoot\tom.txt"
 
-$KEYWORDLIST="C:\Program Files\Python311\Lib\site-packages\bing_rewards\data\keywords.txt"
-$DOWNLOADFILE="C:\Scripts\searches.txt"
-$TEMPFILE="C:\Scripts\tempfile.txt"
+ $KEYWORDLIST="C:\Program Files\Python311\Lib\site-packages\bing_rewards\data\keywords.txt"
+ $DOWNLOADFILE="$PSScriptRoot\searches.txt"
+ $TEMPFILE="$PSScriptRoot\tempfile.txt"
 
 function updatewords {
     # Connect to Google and download their latest daily trending searches
