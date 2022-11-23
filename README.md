@@ -19,7 +19,7 @@ Two scripts are provided:
 
 - Schedule using cron (Linux) for 1am:
 
-     ```echo "0 1 * * * bash ~/gen_bing_words.sh > ~/updatewords.txt" | crontab
+     ```echo "0 1 * * * bash ~/gen_bing_words.sh > ~/updatewords.txt" | crontab```
 
 - Schedule using Task Scheduler (Windows) for 1am:
      Click Start
@@ -37,8 +37,8 @@ Two scripts are provided:
 
    However, if you like to throw caution to the wind, add "--force" at the end of either script:
 
-      gen_bing_words.sh --force
-      gen_bing_words.ps1 --force
+      ```gen_bing_words.sh --force```
+      ```gen_bing_words.ps1 --force```
 
 - Windows:  
 
@@ -63,5 +63,5 @@ Two scripts are provided:
    Ensure the user running the script has write permissions on the keywords.txt file.  You can do so by:
 
      sudo to root
-     
-     ```chown <your username> /path/to/keywords.txt
+
+     ```chown <your username> /path/to/keywords.txt```
