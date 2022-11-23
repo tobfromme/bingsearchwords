@@ -4,34 +4,36 @@ I wanted the keywords.txt file to be updated with relevant searches, not things 
 
 Two scripts are provided:
 
-- gen_bing_words.ps1:  Tested with PowerShell 7.3 on Windows 11 only
-- gen_bing_words.sh:   Tested on Arch Linux and Fedora 36/37
+- gen_bing_words.ps1:&nbsp;&nbsp;&nbsp;Tested with PowerShell 7.3 on Windows 11 only
+- gen_bing_words.sh:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tested on Arch Linux and Fedora 36/37
 
-# Installation:
+# Installation
 
 - Install bing-rewards *first*.  I run it fine with Python 3.11.0.
 
 - Download the appropriate files for your system.
-   For Linux, your home directory is fine.
+   For Linux, your home directory is suitable.
    For Windows, I recommend creating C:\Scripts and saving there.  Otherwise, you'll need to edit the script.
 
 - Update the script to the correct location of keywords.txt (the KEYWORDLIST variable)
 
+# Scheduling
 - Schedule using cron (Linux) for 1am:
 
      ```echo "0 1 * * * bash ~/gen_bing_words.sh > ~/updatewords.txt" | crontab```
 
 - Schedule using Task Scheduler (Windows) for 1am:
-     Click Start
-     Type "Task Scheduler"
-     Right-click "Task Scheduler Library" on the left
-     Click "Import Task"
-     Browse to the downloaded "Generate Bing Keywords.xml" file.
-     Click OK.
 
-# Important Notes *before executing*:
+     1. Click Start
+     2. Type "Task Scheduler"
+     3. Right-click "Task Scheduler Library" on the left
+     4. Click "Import Task"
+     5. Browse to the downloaded "Generate Bing Keywords.xml" file.
+     6. Click OK.
 
-## All:
+# **Important Notes *before executing***
+
+## **All scripts**
 
    The script will only modify the keywords.txt file once per day by default.  This is to ensure it is not overrun with the same keywords, thus making your automated searches ineffective.
 
@@ -40,7 +42,7 @@ Two scripts are provided:
       gen_bing_words.sh --force
       gen_bing_words.ps1 --force
 
-## Windows:  
+## **Windows**  
 
    You must run with Administrator, unless you have modified the permissions of the keywords.txt file to allow your user to write to it (recommended) or disabled UAC.  You can do so by:
 
@@ -58,7 +60,7 @@ Two scripts are provided:
      12. Click "Full Control"
      13. Click "OK"
 
-## Linux:
+## **Linux**
 
    Ensure the user running the script has write permissions on the keywords.txt file.  You can do so by:
 
