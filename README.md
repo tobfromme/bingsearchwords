@@ -18,7 +18,7 @@ Two scripts are provided:
 - Update the script to the correct location of keywords.txt (the KEYWORDLIST variable)
 
 - Schedule using cron (Linux) for 1am:
-     ```echo "0 1 * * * bash ~/gen_bing_words.sh > ~/updatewords.txt" | crontab
+  ```echo "0 1 * * * bash ~/gen_bing_words.sh > ~/updatewords.txt" | crontab```
 
 - Schedule using Task Scheduler (Windows) for 1am:
      Click Start
@@ -43,23 +43,23 @@ Two scripts are provided:
 
    You must run with Administrator, unless you have modified the permissions of the keywords.txt file to allow your user to write to it (recommended) or disabled UAC.  You can do so by:
 
-     Right-clicking the keywords.txt file > Properties > Security
-     Click "Edit"
-     Click "Add"
-     Click "Advanced"
-     Click "Object Types"
-     Uncheck everything but "Users"
-     Click "Find Now"
-     Select your user from the list.  It should not have an arrow pointing down (indicating disabled) on the icon.
-     Click "OK"
-     Click "OK" again
-     Highlight your user in the list
-     Click "Full Control"
-     Click "OK"
+     1.  Right-clicking the keywords.txt file > Properties > Security
+     2.  Click "Edit"
+     3.  Click "Add"
+     4.  Click "Advanced"
+     5.  Click "Object Types"
+     6.  Uncheck everything but "Users"
+     7.  Click "Find Now"
+     8.  Select your user from the list.  It should not have an arrow pointing down (indicating disabled) on the icon.
+     9.  Click "OK"
+     10. Click "OK" again
+     11. Highlight your user in the list
+     12. Click "Full Control"
+     13. Click "OK"
 
 - Linux:
 
    Ensure the user running the script has write permissions on the keywords.txt file.  You can do so by:
 
      sudo to root
-     ```chown <your username> /path/to/keywords.txt
+     ```chown <your username> /path/to/keywords.txt```
