@@ -2,7 +2,7 @@ Param(
     [string] $forceFlag
  )
 
- Start-Transcript "$PSScriptRoot\tom.txt"
+ Start-Transcript "$PSScriptRoot\updatewords.txt"
 
  $KEYWORDLIST="C:\Program Files\Python311\Lib\site-packages\bing_rewards\data\keywords.txt"
  $DOWNLOADFILE="$PSScriptRoot\searches.txt"
