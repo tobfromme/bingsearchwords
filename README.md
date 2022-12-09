@@ -9,7 +9,7 @@ Two scripts are provided:
 
 # Installation
 
-- Install bing-rewards *first*.  I run it fine with Python 3.11.0.
+- Install bing-rewards *first*.  I run it fine with Python 3.10.x or 3.11.0.
 
 - For Windows only, install [PowerShell 7](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?WT.mc_id=THOMASMAURER-blog-thmaure&view=powershell-7 "PowerShell 7").  Install in the default location or you will need to update the Task Scheduler job to point to the correct location (under Scheduling).
 
@@ -64,7 +64,8 @@ Two scripts are provided:
 
 ## **Linux**
 
-   Ensure the user running the script has write permissions on the keywords.txt file.  You can do so by:
+   Ensure the user running the script has write permissions on the directory where the keywords.txt file exists.  You can do so by:
 
      sudo to root
-     chown <your username> /path/to/keywords.txt
+     chown -R <your username> /path/to
+	( i.e. sudo chown -R username /usr/lib/python3.10/site-packages/bing_rewards/data ) 

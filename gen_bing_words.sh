@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define variables.  Ensure KEYWORDLIST points to the correct file and your user has access to it.
-KEYWORDLIST="/usr/local/lib/python3.11/site-packages/bing_rewards/data/keywords.txt"
+KEYWORDLIST="/usr/lib/python3.10/site-packages/bing_rewards/data/keywords.txt"
 DOWNLOADFILE="searches.txt"
 
 updatewords() {
@@ -23,7 +23,7 @@ updatewords() {
 
 	# Let's update the year
 	CURRENTYEAR=$(date +%YYYY)
-	/usr/bin/sed -i "s/2[0-9][0-9][0-9]/${CURRENTYEAR}/g"
+	/usr/bin/sed -i "s/2[0-9][0-9][0-9]/${CURRENTYEAR}/g" ${KEYWORDLIST}
 
 	# Now append the Google searches to the keyword list
 	cat ${DOWNLOADFILE} >> ${KEYWORDLIST}
