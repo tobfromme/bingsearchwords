@@ -1,6 +1,6 @@
 Start with the Python script from here:  [bing-rewards](https://github.com/jack-mil/bing-rewards "Bing Rewards")
 
-You likely want the keywords.txt file to be updated with relevant searches, not things from several years ago.  Additionally these scripts will keep any search terms with a recently decent year (i.e. 2000+) updated with the current year.
+You likely want the keywords.txt file to be updated with relevant searches, not things from several years ago.  Additionally, these scripts will keep any search terms including a year (i.e. 2000+) to be updated with the current year.
 
 Two scripts are provided:
 
