@@ -66,6 +66,5 @@ Two scripts are provided:
 
    Ensure the user running the script has write permissions on the directory where the keywords.txt file exists.  You can do so by:
 
-     sudo to root
-     chown -R <your username> /path/to
+     sudo chown -R <your username> /path/to/directory
 	( i.e. sudo chown -R username /usr/lib/python3.10/site-packages/bing_rewards/data ) 
